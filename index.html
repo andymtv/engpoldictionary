@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My dictionary</title>
+</head>
+<body>
+    <div class="main">
+        <p class="title">My English-Polish Dictionary</p>
+        <div class="area input-area">
+            <p class="text text-english">Word</p>
+            <p class="text text-polish">Translate</p>
+            <input type="text" class="word word-english" placeholder="Word in English">
+            <input type="text" class="word word-polish" placeholder="Word in Polish">
+            <button class="add-word">Add Word</button>
+        </div>
+        <div class="area result-area">
+            <div class="container-result-english">
+                <ul class="list list-english">
+                </ul>
+            </div>
+            <div class="container-result-polish">
+                <ul class="list list-polish">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
