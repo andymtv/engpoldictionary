@@ -139,3 +139,10 @@ input {
         margin: 0px 50px;
     }
 }
+
+
+@media screen and (max-width: 1080px){
+    .main{
+        height: 50%;
+    }
+}
