@@ -43,6 +43,34 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        window.addEventListener('keydown', e => {
+            if(e.key === 'Enter'){
+            if(inputEnglish.value != "" && inputPolish.value != ""){
+                textEnglish = inputEnglish.value,
+                textPolish = inputPolish.value;
+                listItemEnglish = document.createElement('li'),
+                listItemPolish = document.createElement('li');
+    
+                listEnglish.prepend(listItemEnglish);
+                listItemEnglish.textContent = textEnglish;
+                
+                listPolish.prepend(listItemPolish);
+                listItemPolish.textContent = textPolish;
+    
+                words = localStorage.setItem(textEnglish, textPolish);
+    
+                inputEnglish.value = '';
+                inputPolish.value = '';
+    
+                listItemEnglish.insertAdjacentHTML('afterbegin', 
+                        '<img src="img/delete.png" class="delete-btn">'
+                    );
+                    deleteBtn = document.querySelectorAll('.delete-btn');
+                canDelete();
+                }
+            }
+        });
+
         function gettingKeysOfLS(localStorage) {
             let arr = [];
             for(let i = 0; i < localStorage.length; i++){
